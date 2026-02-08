@@ -2,127 +2,290 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Students Against Poverty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Students Against Poverty</title>
+
+  <style>
+    :root {
+      --green-light: #c5d9b5;
+      --green: #a8c593;
+      --green-dark: #6b9b4d;
+      --green-soft: #e8f2e0;
+      --text-dark: #1f2937;
+      --text-muted: #4b5563;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      color: var(--text-dark);
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      background: var(--green-light);
+      border-bottom: 1px solid #b8ccb0;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      max-height: 48px; /* FIXES HUGE LOGO */
+      width: auto;
+    }
+
+    .logo span {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: var(--text-muted);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      background: linear-gradient(135deg, var(--green-light), var(--green));
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 20px auto 0;
+    }
+
+    /* ---------- CARDS ---------- */
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    /* ---------- STATS ---------- */
+    .stats {
+      background: #f3f4f6;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--green-dark);
+    }
+
+    /* ---------- TEAM ---------- */
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin: 0 auto 10px;
+    }
+
+    /* ---------- TIMELINE ---------- */
+    .timeline-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .year {
+      font-weight: bold;
+      color: var(--green-dark);
+      min-width: 60px;
+      text-align: right;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--green-dark);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="nav">
-  <h2>SAP</h2>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#get-involved">Get Involved</a>
-    <a href="#impact">Impact</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<!-- HOME -->
-<section id="home" class="hero">
-  <h1>Together, We Can End Poverty</h1>
-  <p>Students Against Poverty empowers young leaders to create meaningful change worldwide.</p>
-  <div class="buttons">
-    <a href="#get-involved" class="btn primary">Get Involved</a>
-    <a href="#about" class="btn outline">Learn More</a>
-  </div>
-</section>
-
-<section class="stats">
-  <div><strong>10,000+</strong><span>Students Involved</span></div>
-  <div><strong>150+</strong><span>Communities Helped</span></div>
-  <div><strong>500+</strong><span>Projects Completed</span></div>
-  <div><strong>50,000+</strong><span>Lives Impacted</span></div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <h2>About SAP</h2>
-  <p class="center">
-    Founded in 2015, Students Against Poverty is a student-led organization committed to ending poverty.
-  </p>
-
-  <h3>Our Values</h3>
-  <div class="grid">
-    <div class="card">Action-Oriented</div>
-    <div class="card">Empowerment</div>
-    <div class="card">Impact-Driven</div>
-    <div class="card">Community-Focused</div>
-  </div>
-
-  <h3>Leadership Team</h3>
-  <div class="grid">
-    <div class="card"><strong>Sarah Johnson</strong><br/>Founder & President</div>
-    <div class="card"><strong>Michael Chen</strong><br/>Vice President</div>
-    <div class="card"><strong>Aisha Patel</strong><br/>Director of Programs</div>
-    <div class="card"><strong>James Wilson</strong><br/>Director of Fundraising</div>
-  </div>
-</section>
-
-<!-- GET INVOLVED -->
-<section id="get-involved" class="alt">
-  <h2>Get Involved</h2>
-  <div class="grid">
-    <div class="card">Volunteer</div>
-    <div class="card">Donate</div>
-    <div class="card">Host an Event</div>
-    <div class="card">Spread the Word</div>
-    <div class="card">Corporate Sponsorship</div>
-    <div class="card">Start a Chapter</div>
-  </div>
-
-  <h3>Volunteer Opportunities</h3>
-  <ul class="list">
-    <li>Tutoring Volunteer</li>
-    <li>Food Drive Coordinator</li>
-    <li>Social Media Ambassador</li>
-    <li>Event Planning Team</li>
-  </ul>
-</section>
-
-<!-- IMPACT -->
-<section id="impact">
-  <h2>Our Impact</h2>
-  <div class="grid">
-    <div class="card">5,000+ Students Tutored</div>
-    <div class="card">$250,000 Scholarships</div>
-    <div class="card">100,000+ Meals Provided</div>
-    <div class="card">1,200 Housing Assisted</div>
-    <div class="card">800 Job Trainees</div>
-    <div class="card">3,000 Healthcare Referrals</div>
-  </div>
-
-  <h3>Success Stories</h3>
-  <blockquote>
-    “SAP allowed me to become a first-generation college graduate.” — Maria
-  </blockquote>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="alt">
-  <h2>Contact Us</h2>
-
-  <div class="contact-grid">
-    <div>
-      <p>Email: info@sap.org</p>
-      <p>Phone: (555) 123-4567</p>
-      <p>Address: 123 Campus Drive</p>
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <!-- REPLACE src WITH YOUR LOGO FILE -->
+        <img src="logo.png" alt="SAP Logo">
+        <span>Students Against Poverty</span>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#impact">Impact</a>
+      </nav>
     </div>
+  </header>
 
-    <form>
-      <input placeholder="First Name" required />
-      <input placeholder="Last Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Message"></textarea>
-      <button class="btn primary">Send Message</button>
-    </form>
-  </div>
-</section>
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Together, We Can End Poverty</h1>
+      <p>
+        Students Against Poverty empowers young leaders to create meaningful change
+        in communities worldwide.
+      </p>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2026 Students Against Poverty</p>
-</footer>
+  <section class="stats">
+    <div class="container grid grid-4">
+      <div>
+        <div class="stat-number">10,000+</div>
+        <p>Students Involved</p>
+      </div>
+      <div>
+        <div class="stat-number">150+</div>
+        <p>Communities Helped</p>
+      </div>
+      <div>
+        <div class="stat-number">500+</div>
+        <p>Projects Completed</p>
+      </div>
+      <div>
+        <div class="stat-number">50,000+</div>
+        <p>Lives Impacted</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2>About SAP</h2>
+      <p>
+        Founded in 2015, Students Against Poverty began as a group of students who
+        believed young people could end poverty.
+      </p>
+
+      <h2 style="margin-top:60px;">Our Values</h2>
+      <div class="grid grid-4">
+        <div class="card"><h3>Action-Oriented</h3><p>We take real steps to fight poverty.</p></div>
+        <div class="card"><h3>Empowerment</h3><p>We build student leaders.</p></div>
+        <div class="card"><h3>Impact-Driven</h3><p>Every program creates measurable change.</p></div>
+        <div class="card"><h3>Community-Focused</h3><p>Solutions built with communities.</p></div>
+      </div>
+
+      <h2 style="margin-top:60px;">Leadership Team</h2>
+      <div class="grid grid-4">
+        <div class="card"><div class="avatar">SJ</div><h3>Sarah Johnson</h3><p>Founder & President</p></div>
+        <div class="card"><div class="avatar">MC</div><h3>Michael Chen</h3><p>Vice President</p></div>
+        <div class="card"><div class="avatar">AP</div><h3>Aisha Patel</h3><p>Director of Programs</p></div>
+        <div class="card"><div class="avatar">JW</div><h3>James Wilson</h3><p>Director of Fundraising</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="impact" style="background:var(--green-soft);">
+    <div class="container">
+      <h2>Our Impact</h2>
+
+      <div class="grid grid-3">
+        <div class="card"><h3>Tutoring & Mentorship</h3><p>5,000+ students tutored</p></div>
+        <div class="card"><h3>Scholarship Fund</h3><p>$250,000 distributed</p></div>
+        <div class="card"><h3>Food Security</h3><p>100,000+ meals provided</p></div>
+        <div class="card"><h3>Housing Support</h3><p>1,200 people assisted</p></div>
+        <div class="card"><h3>Job Training</h3><p>800+ participants trained</p></div>
+        <div class="card"><h3>Healthcare Access</h3><p>3,000+ referrals made</p></div>
+      </div>
+
+      <h2 style="margin-top:60px;">Our Journey</h2>
+      <div>
+        <div class="timeline-item"><div class="year">2015</div><p>SAP founded with 15 students</p></div>
+        <div class="timeline-item"><div class="year">2017</div><p>50 university chapters</p></div>
+        <div class="timeline-item"><div class="year">2019</div><p>First scholarships distributed</p></div>
+        <div class="timeline-item"><div class="year">2023</div><p>National mentorship launched</p></div>
+        <div class="timeline-item"><div class="year">2025</div><p>150+ communities served</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Students Against Poverty
+  </footer>
 
 </body>
 </html>
